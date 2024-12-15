@@ -1,0 +1,44 @@
+#home-page{
+  height: auto;
+  width: 1000px;
+  margin: 0 auto; 
+  background-color: #408fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+#profile-picture{
+  height: 200px;
+  width: auto;
+  border-radius: 75px;
+  margin-top: 10px;
+  border: solid black 5px;
+}
+#items{
+  height: auto;
+  width: auto;
+}
+#items > div{
+  background-color: antiquewhite;
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+}
+body{
+  background-color: #1d0157;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+p{
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0px;
+}
