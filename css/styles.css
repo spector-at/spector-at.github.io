@@ -62,3 +62,13 @@ a {
   display: inline-block; /* Ensure the link behaves like a container */
   text-align: center;
 }
+#typology{
+  font-size: 20px;
+  margin: -20px;
+  font-weight: bolder;
+  text-shadow: 
+    -0.6px -0.6px 0 rgb(255, 255, 255),  /* Top-left shadow */
+     0.6px -0.6px 0 rgb(255, 255, 255),  /* Top-right shadow */
+    -0.6px  0.6px 0 rgb(255, 255, 255),  /* Bottom-left shadow */
+     0.6px  0.6px 0 rgb(255, 255, 255);  /* Bottom-right shadow */
+}
