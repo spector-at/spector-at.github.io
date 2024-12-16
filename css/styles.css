@@ -1,6 +1,7 @@
 #home-page{
   height: auto;
-  width: 1000px;
+  max-width: 1200px;
+  width: 90%;
   margin: 0 auto; 
   background-color: #1d0157;
   display: flex;
