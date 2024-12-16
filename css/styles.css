@@ -76,17 +76,20 @@ a {
 
 @media screen and (max-width: 1000px){
   #home-page{
-    width: 750px;
+    max-width: 750px;
+    width: 90%;
   }
 }
 @media screen and (max-width: 750px){
   #home-page{
-    width: 500px;
+    max-width: 500px;
+    width: 90%;
   }
 }
 @media screen and (max-width: 400px){
   #home-page{
-    width: 250px;
+    max-width: 350px;
+    width: 90%;
   }
   #profile-picture{
     height: 100px;
