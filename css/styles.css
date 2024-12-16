@@ -113,7 +113,6 @@ a {
   }
   #items > a{
     height: 25px;
-    width: 100px;
     font-size: 10px;
   }
 }
