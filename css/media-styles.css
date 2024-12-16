@@ -6,6 +6,10 @@ h2{
 }
 ol > li {
   margin: 10px;
+  font-weight: bold;
+}
+ul{
+  font-weight: normal;
 }
 #box{
   height: auto;
