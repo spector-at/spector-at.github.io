@@ -17,12 +17,13 @@ ul{
   border: solid black 10px;
   padding: 5px;
   background-color: burlywood;
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
 }
 @media (min-width: 600px){
   #box > * {
     margin-left: 4em;
+    width: 80%;
   }
 }
 body{
