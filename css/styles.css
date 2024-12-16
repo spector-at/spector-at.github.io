@@ -73,7 +73,11 @@ a {
     -0.6px  0.6px 0 rgb(255, 255, 255),  /* Bottom-left shadow */
      0.6px  0.6px 0 rgb(255, 255, 255);  /* Bottom-right shadow */
 }
-
+@media screen and (min-width: 1000px) {
+  #items > a{
+    width: 400px;
+  }
+}
 
 @media screen and (max-width: 1000px){
   #home-page{
