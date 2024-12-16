@@ -72,3 +72,44 @@ a {
     -0.6px  0.6px 0 rgb(255, 255, 255),  /* Bottom-left shadow */
      0.6px  0.6px 0 rgb(255, 255, 255);  /* Bottom-right shadow */
 }
+
+
+@media screen and (max-width: 1000px){
+  #home-page{
+    width: 750px;
+  }
+}
+@media screen and (max-width: 750px){
+  #home-page{
+    width: 500px;
+  }
+}
+@media screen and (max-width: 400px){
+  #home-page{
+    width: 250px;
+  }
+  #profile-picture{
+    height: 100px;
+  }
+  p{
+    font-size: 20px;
+    text-shadow: 
+    -0.5px -0.5px 0 rgb(255, 255, 255),  /* Top-left shadow */
+     0.5px -0.5px 0 rgb(255, 255, 255),  /* Top-right shadow */
+    -0.5px  0.5px 0 rgb(255, 255, 255),  /* Bottom-left shadow */
+     0.5px  0.5px 0 rgb(255, 255, 255);  /* Bottom-right shadow */
+  }
+  #typology{
+    font-size: 10px;
+    text-shadow: 
+    -0.3px -0.3px 0 rgb(255, 255, 255),  /* Top-left shadow */
+     0.3px -0.3px 0 rgb(255, 255, 255),  /* Top-right shadow */
+    -0.3px  0.3px 0 rgb(255, 255, 255),  /* Bottom-left shadow */
+     0.3px  0.3px 0 rgb(255, 255, 255);  /* Bottom-right shadow */
+  }
+  #items > a{
+    height: 25px;
+    width: 100px;
+    font-size: 10px;
+  }
+}
