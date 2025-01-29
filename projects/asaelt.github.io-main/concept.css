@@ -1,0 +1,102 @@
+body{
+    background-image: url(webbg.gif);
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.menu-bar {
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    width: 96px;
+    height: 96px;
+    top:0px;
+    left: 0px;
+    cursor: pointer;
+  }
+.menu {
+    list-style: none;
+    top: 78px;
+    left: 68px;
+    display: none;
+    position: absolute;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: transparent; /* Background color for each menu item */
+    border-radius: 5px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .menu a:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+   /* Background color on hover */
+  }
+  .docsbutton{
+    width: 808px;
+    height: 225px;
+    align-items: center;
+    position: absolute;
+    left: 217px;
+
+
+  }
+  .h2{
+    position: absolute;
+    top: 440px;
+    right: 462px;
+    color: white;
+    font-weight: bold;
+  }
+  .databutton{
+    height: 259px;
+    width: 555px;
+    align-items: center;
+    position: absolute;
+    left: 353px;
+}
+.h3{
+  position: absolute;
+  top: 440px;
+  right: 462px;
+  color: white;
+  font-size: larger;
+}
+.presentationbutton{
+  height: 259px;
+  width: 555px;
+  align-items: center;
+  position: absolute;
+  left: 353px;
+}

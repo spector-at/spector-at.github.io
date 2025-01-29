@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AND</title>
+    <style>
+        .button {
+            background-color: #008CBA; /* Blue */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Include the external JavaScript file -->
+    <script src="javascript.js"></script>
+
+    <form onsubmit="and(); return false;">
+        <button type="submit" class="button">Run</button>
+    </form>
+
+    <p>
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <!-- Image 1 (Switch for Input One) -->
+                    <img src="off.png" id="toggleImage" onclick="toggleImage('toggleImage'); toggleInputOne();" />
+                    <br>
+                    <!-- Image 2 (Switch for Input Two) -->
+                    <img src="off.png" id="toggleImage2" onclick="toggleImage('toggleImage2'); toggleInputTwo();" />
+                </td>
+                <td>
+                    <!-- AND Gate Image -->
+                    <img id="andGate" src="and2off.PNG">
+                </td>
+            </tr>
+        </table>
+
+        <a href="index.html">Back to Home</a>
+    </p>
+
+</body>
+
+</html>

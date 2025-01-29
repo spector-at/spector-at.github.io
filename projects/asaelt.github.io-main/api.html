@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript & APIs</title>
+
+  <style>
+    body {
+      width: 400px;
+      margin: 0 auto;
+      padding-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .content {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+    .container {
+      border: solid black 2px;
+      padding: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container content">
+
+    <h1>JavaScript & API's</h1>
+    <p>I have IP-grabbed you and now I can dox you.</p>
+    <h2> Your IP address is: </h2> 
+    <p id="IP"></p>
+    <h2>You are from:</h2>
+    <p id="city"></p>
+    <p id="country"></p>
+
+    <h2>The weather there is (based on location):</h2>
+    <p id="weather"></p>
+
+    <h2>The weather there is (based on IP Address):</h2>
+    <p id="weather2"></p>
+
+  </div>
+
+  <script>
+    async function loadLocation() {
+      const myIpAddress = await fetch("https://api.ipify.org?format=json");
+      const ipAddress = await myIpAddress.json();
+      console.log("My IP Address is:", ipAddress);
+
+      const response = await fetch("https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/?ip=" + ipAddress.ip, {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": "ip-geolocation-ipwhois-io.p.rapidapi.com",
+          "x-rapidapi-key": "044e648b19mshfece6f865ead2b3p1a1a7ajsn036a4345378f"
+        }
+      });
+
+      const location = await response.json();
+      document.getElementById("city").innerText = location.city;
+      document.getElementById("country").innerText = location.country;
+
+      console.log(location);
+
+      const responseWeather = await fetch(`https://api.weatherapi.com/v1/current.json?key=98ce24c009054a42b8d185323241411&q=${location.city}`);
+      const weatherData = await responseWeather.json();
+
+      const response2 = await fetch("https://api.weatherapi.com/v1/current.json?key=98ce24c009054a42b8d185323241411&q=auto:ip");
+      const weatherData2 = await response2.json();
+
+      document.getElementById("weather").innerText = weatherData.current.condition.text;
+      document.getElementById("IP").innerHTML = ipAddress.ip;
+      document.getElementById("weather2").innerText = weatherData2.current.condition.text;
+
+    }
+
+    loadLocation();
+  </script>
+
+</body>
+
+</html>

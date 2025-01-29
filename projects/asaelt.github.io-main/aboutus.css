@@ -1,0 +1,411 @@
+body
+{
+    background:url(webbg.gif)
+}
+.menu-bar {
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 23px;
+    left: 23px;
+  }
+  
+  .menu-icon {
+    width: 57px;
+    height: 51px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 52px;
+    left: 21px;
+    padding: 8px;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: transparent; /* Background color for each menu item */
+    border-radius: 5px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .menu a:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+   /* Background color on hover */
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  /* Global styles for all cards */
+.card1 {
+  width: 364px;
+  height: 258px;
+  left: 190px;
+  top: 98px;
+  position: absolute;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 0 20px 20px 0; /* Adjust margins as needed */
+}
+.card2{
+  width: 334px;
+  height: 290px;
+  left: 879px;
+  top: 98px;
+  position: absolute;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 0 20px 20px 0; 
+}
+.card3{
+  width: 344px;
+  height: 267px;
+  left: 879px;
+  top: 442px;
+  position: absolute;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 0 20px 20px 0; 
+}
+.card4{
+  width: 364px;
+  height: 267px;
+  left: 190px;
+  top: 426px;
+  position: absolute;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 0 20px 20px 0; 
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+
+
+/* Customize styles for each card */
+.card1 .card-back {
+  -webkit-box-shadow:3px 8px 39px 28px rgba(36,36,240,0.35);
+  -moz-box-shadow: 3px 8px 39px 28px rgba(36,36,240,0.35);
+  box-shadow: 3px 8px 39px 28px rgba(36,36,240,0.35);
+  color: transparent;
+  transform: rotateY(180deg);
+  background-image: url(about\ me\ bg.webp);
+  background-size: cover;
+}
+
+.card2 .card-back {
+  -webkit-box-shadow:3px 8px 39px 28px rgba(36,36,240,0.35);
+  -moz-box-shadow: 3px 8px 39px 28px rgba(36,36,240,0.35);
+  box-shadow: 3px 8px 39px 28px rgba(36,36,240,0.35);
+  color: transparent;
+  transform: rotateY(180deg);
+  background-image: url(asaelbg.jpg);
+  background-size: cover;
+
+  
+}
+.card3 .card-back {
+  -webkit-box-shadow:3px 8px 39px 28px rgba(36,36,240,0.35);
+  -moz-box-shadow: 3px 8px 39px 28px rgba(36,36,240,0.35);
+  box-shadow: 3px 8px 39px 28px rgba(36,36,240,0.35);
+  color: transparent;
+  transform: rotateY(180deg);
+  background-image: url(karimbg.jpeg);
+  background-size: cover;
+}
+.card4 .card-back {
+  -webkit-box-shadow:3px 8px 39px 28px rgba(36,36,240,0.35);
+  -moz-box-shadow: 3px 8px 39px 28px rgba(36,36,240,0.35);
+  box-shadow: 3px 8px 39px 28px rgba(36,36,240,0.35);
+  color: transparent;
+  transform: rotateY(180deg);
+  background-image: url(abner\ bg.jpg);
+  background-size: contain;
+}
+
+/* Hover effect for flipping */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front img {
+  width: 100%; /* Make the image fill the entire card front */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+}
+.p1{
+  text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0; /* To remove any default margin */
+    padding: 0px; 
+  position: absolute;
+background-color: transparent;
+font-size: 20px;
+color: white;
+backdrop-filter: blur(5px);
+}
+.p2
+{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0; /* To remove any default margin */
+  padding: 0px; 
+position: absolute;
+background-color: transparent;
+font-size: 20px;
+color: black;
+backdrop-filter: blur(5px);
+}
+.p3{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0; /* To remove any default margin */
+  padding: 0px; 
+position: absolute;
+background-color: transparent;
+font-size: 20px;
+color: white;
+backdrop-filter: blur(5px);
+}
+.p4{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0; /* To remove any default margin */
+  padding: 0px; 
+position: absolute;
+background-color: transparent;
+font-size: 20px;
+color: white;
+backdrop-filter: blur(5px);
+}
+a{
+  text-align: center;
+}
+.button1{
+    position: relative;
+    left: 109px;
+    top: 85px;
+    width: 120px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .button1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .button1::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .button1:hover::after {
+    filter: blur(30px);
+  }
+  
+  .button1:hover::before {
+    transform: rotate(-180deg);
+  }
+  
+  .button1:active::before {
+    scale: 0.7;
+  }
+  
+  .button2{
+    position: relative;
+    left: 109px;
+    top: -20px;
+    width: 120px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .button2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .button2::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .button2:hover::after {
+    filter: blur(30px);
+  }
+  
+  .button2:hover::before {
+    transform: rotate(-180deg);
+  }
+  
+  .button2:active::before {
+    scale: 0.7;
+  }
+  .button3{
+    position: relative;
+    left: 109px;
+    top: -20px;
+    width: 120px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .button3::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .button3::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .button3:hover::after {
+    filter: blur(30px);
+  }
+  
+  .button3:hover::before {
+    transform: rotate(-180deg);
+  }
+  
+  .button3:active::before {
+    scale: 0.7;
+  }
