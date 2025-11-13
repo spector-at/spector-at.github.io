@@ -1,0 +1,186 @@
+/* === Color Palette === */
+:root {
+  --color-primary: #007BFF;
+  --color-accent: #6C63FF;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F5F6FA;
+  --color-text: #333333;
+  --color-dark: #002B5B;
+  --color-dark-2: #34025f;
+  --color-accent-light: #8E7CFD;
+}
+
+/* === Reset and Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* === Navbar === */
+nav {
+  background: linear-gradient(
+    90deg,
+    var(--color-dark) 0%,
+    var(--color-dark-2) 50%,
+    var(--color-dark) 100%
+  );
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* === Logo === */
+.logo h1 {
+  color: var(--color-bg);
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* === Nav Links === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links li {
+  position: relative;
+  padding: 0; /* padding now on <a> for hover effect */
+}
+
+/* Vertical separators between items */
+.nav-links li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 1px;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Nav link styles (block + hover) */
+.nav-links a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--color-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect on entire link container */
+.nav-links li:hover a {
+  background-color: rgba(108, 99, 255, 0.3);
+  color: var(--color-accent-light);
+}
+
+/* Faint underline (optional for extra flair) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-accent);
+  opacity: 0.4;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links li:hover a::after {
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: var(--color-bg);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger active animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    height: calc(100vh - 80px);
+    width: 60%;
+    background-color: var(--color-dark);
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 2rem;
+    gap: 2rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Remove separators for mobile menu (optional) */
+  .nav-links li:not(:last-child)::after {
+    display: none;
+  }
+}
+ 
+footer {
+    background: linear-gradient(
+    90deg,
+    var(--color-dark) 0%,
+    var(--color-dark-2) 50%,
+    var(--color-dark) 100%
+  );
+  color: white;
+}
