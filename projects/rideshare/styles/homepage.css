@@ -1,0 +1,379 @@
+:root {
+  --background-1: #0a0a1f;       /* deep navy */
+  --background-2: #101025;       /* slightly lighter dark blue */
+  --background-3: #1c1c2f;       /* muted purple-blue */
+  
+  --button-background: #ffb400;  /* warm golden accent */
+  --accent-color: #00ffff;       /* cyan highlight */
+  --accent-light: #66ffff;       /* lighter cyan for secondary accents */
+
+  --text-light: #f5f5f5;         /* bright off-white */
+  --text-muted: rgba(245, 245, 245, 0.6); /* muted text */
+  --card-background: rgba(255, 180, 64, 0.08); /* subtle golden tint for cards */
+  --card-background-hover: rgba(255, 180, 64, 0.15);
+}
+
+/* === GLOBAL === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-1);
+  color: var(--text-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+}
+
+/* Scroll fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === HERO SECTION === */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 5%;
+  color: var(--text-light);
+  background: linear-gradient(135deg, #0a0a1f 0%, #101025 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 255, 255, 0.08);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 180, 64, 0.03);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Hero Left: Text */
+.hero-left {
+  position: relative;
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  color: var(--accent-color);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+  letter-spacing: 1px;
+}
+
+.hero-left h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.hero-left p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--button-background);
+  max-width: 480px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Hero Right: Image */
+.hero-right {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hero-right img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* === ABOUT SECTION === */
+#about {
+  background: linear-gradient(180deg, #0c0c2b 0%, #1a1a3a 100%);
+  color: var(--text-light);
+  padding: 6rem 5%;
+  text-align: center;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.15);
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+#about p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* === TEAM SECTION === */
+#team {
+  background: linear-gradient(135deg, #1c1c2f -20%, #2a2a4c 100%);
+  color: var(--text-light);
+  padding: 6rem 5%;
+  text-align: center;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.2);
+}
+
+#team h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+/* Team members container */
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Individual team card */
+.team-members > div {
+  background: var(--card-background);
+  padding: 2rem;
+  flex: 1 1 250px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.team-members > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+  background: var(--card-background-hover);
+}
+
+/* Team member names and roles */
+.team-members h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.team-members h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Team member images */
+.team-members img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 1rem;
+  border: 2px solid var(--accent-light);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-members img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* === BUTTONS / LINKS === */
+a.button,
+#reports a,
+#demos a,
+#presentations a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-background);
+  color: var(--background-3);
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#presentations {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+a.button:hover,
+#reports a:hover,
+#demos a:hover,
+#presentations a:hover {
+  transform: translateY(-3px) scale(1.03);
+  background-color: var(--accent-color);
+  color: var(--background-1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* === REPORTS / DEMOS / PRESENTATIONS SECTIONS === */
+#reports {
+  background: linear-gradient(135deg, #00001a 0%, #0d0d2f 100%);
+  color: var(--text-light);
+  padding: 6rem 5%;
+  text-align: center;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.15);
+}
+
+#demos {
+  background: linear-gradient(180deg, #1a1a33 0%, #25254d 100%);
+  color: var(--text-light);
+  padding: 6rem 5%;
+  text-align: center;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.15);
+}
+
+#presentations {
+  background: linear-gradient(135deg, #11001f -20%, #2b1a4c 100%);
+  color: var(--text-light);
+  padding: 6rem 5%;
+  text-align: center;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.15);
+}
+
+#reports h2, #demos h2, #presentations h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+#reports p, #demos p, #presentations p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Videos */
+video {
+  display: block;
+  margin: 0 auto 1em auto;
+  max-width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+video:hover { transform: scale(1.02); }
+
+/* === PRESENTATIONS SECTION GRID === */
+.presentation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.presentation-card {
+  background: rgba(0, 255, 255, 0.08);  /* subtle cyan tint */
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: center;
+}
+
+.presentation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+  background: rgba(0, 255, 255, 0.15);
+}
+
+.presentation-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.presentation-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 3rem 5%;
+  }
+  .hero-left, .hero-right { max-width: 100%; }
+  .hero-left h1 { font-size: 2.2rem; }
+  .hero-left h2 { font-size: 1.2rem; }
+  .hero-left p { font-size: 1rem; }
+  .hero-right { margin-top: 2rem; }
+  .hero-right img { width: 80%; }
+}
+
+@media (max-width: 768px) {
+  .team-members { flex-direction: column; align-items: center; gap: 2.5rem; }
+  .team-members > div { max-width: 80%; }
+}
